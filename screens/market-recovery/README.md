@@ -4,7 +4,7 @@ Revised version of the Q2 2026 PF Market Return Analysis, refocused per CB's 8/1
 
 ## Files
 
-- `Q2_2026_PF_Market_Return_Analysis_v2.xlsx` — the revised workbook (50-market screen)
+- `Q2_2026_PF_Market_Return_Analysis_v2.xlsx` — the revised workbook (65-market screen: original 50 + 15 expansion markets added 8/17 — Milwaukee, Madison, Sioux Falls, Chattanooga, Asheville, Fayetteville-Rogers AR, Baton Rouge, Port St. Lucie, Lakeland-Winter Haven, Myrtle Beach, Naples, Tallahassee, New Orleans, Fort Collins, Spokane. Lake Charles, LA is not in the RealPage DataDirect market set. TTM unit starts blank for the added markets pending the next DataDirect pull)
 - `data/datadirect_72.xlsx` — RealPage DataDirect export (Aug 2026 pull): 150 markets, actuals through 2026Q2, same-store YOY effective rent forecast + Existing Units forecast through 2029Q4
 - `data/Q2_2026_PF_Market_Return_Analysis_v1.xlsx` — prior version (source of the TTM unit starts and 10-yr historical rent change tabs, and the PF LIRR engine that was dropped from v2)
 
