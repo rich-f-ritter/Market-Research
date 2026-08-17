@@ -14,6 +14,7 @@ markets/          One folder per metro market (e.g. markets/dallas-fort-worth/)
     submarkets/   Submarket-level research within that market
     data/         Raw exports for that market (CoStar, RealPage, HelloData, Census, etc.)
     reports/      Finished deliverables (workbooks, memos, maps)
+screens/          Cross-market screens and rankings (e.g. screens/market-recovery/)
 notes/            Cross-market notes, methodology, and scratch research
 ```
 
