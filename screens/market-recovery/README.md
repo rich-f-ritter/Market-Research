@@ -4,15 +4,16 @@ Revised version of the Q2 2026 PF Market Return Analysis, refocused per CB's 8/1
 
 ## Files
 
-- `Q2_2026_PF_Market_Return_Analysis_v2.xlsx` — the revised workbook (65-market screen: original 50 + 15 expansion markets added 8/17 — Milwaukee, Madison, Sioux Falls, Chattanooga, Asheville, Fayetteville-Rogers AR, Baton Rouge, Port St. Lucie, Lakeland-Winter Haven, Myrtle Beach, Naples, Tallahassee, New Orleans, Fort Collins, Spokane. Lake Charles, LA is not in the RealPage DataDirect market set. TTM unit starts for the added markets are ESTIMATES — purple italic cells: RealPage TTM property starts × a size-calibrated units-per-property model fit on the 50 markets with actual unit starts (median abs error 0.2pp of inventory, p90 0.6pp; estimator inputs on Fcst Walk AQ2:AQ3). The two extremes were cross-checked externally: Madison ~5.8k units under construction per CoStar Jan 2026, Asheville 2.9k UC / 1.8k units permitted TTM. Replace with actual Unit Starts from the next DataDirect pull)
+- `Q2_2026_PF_Market_Return_Analysis_v2.xlsx` — the revised workbook (65-market screen: original 50 + 15 expansion markets added 8/17 — Milwaukee, Madison, Sioux Falls, Chattanooga, Asheville, Fayetteville-Rogers AR, Baton Rouge, Port St. Lucie, Lakeland-Winter Haven, Myrtle Beach, Naples, Tallahassee, New Orleans, Fort Collins, Spokane. Lake Charles, LA is not in the RealPage DataDirect market set. TTM unit starts are actuals for all 65 markets from datadirect_74)
 - `data/datadirect_72.xlsx` — RealPage DataDirect export (Aug 2026 pull): 150 markets, actuals through 2026Q2, same-store YOY effective rent forecast + Existing Units forecast through 2029Q4
+- `data/datadirect_74.xlsx` — RealPage DataDirect export (Aug 2026 pull): quarterly Unit Starts 2021Q2–2026Q2 + Existing Units, all 150 markets — feeds the TTM Unit Starts column (ties out exactly to the v1 tab on the 50 overlap markets)
 - `data/Q2_2026_PF_Market_Return_Analysis_v1.xlsx` — prior version (source of the TTM unit starts and 10-yr historical rent change tabs, and the PF LIRR engine that was dropped from v2)
 
 ## Methodology (v2)
 
 - **Mark-to-market:** Asking (gross) and Effective RPSF vs. Rent Roll (Rev/OSF), Q2 2026 actuals.
 - **Time back to even:** Effective RPSF is walked forward quarterly, `Path(t) = Path(t-4) × (1 + forecast YOY(t))`, against a *flat* current rent roll PSF (conservative by design). Reported figure = time until the path recovers to the rent roll level and stays above it through the 3.5-yr horizon, interpolated within the crossing quarter. `†` = still underwater at 2029Q4; extended at the terminal forecast growth rate. Engine on the `Fcst Walk` tab.
-- **Supply:** TTM unit starts as % of inventory (2025Q3–2026Q2) plus forward 12-month inventory growth from RealPage's Existing Units forecast.
+- **Supply:** TTM unit starts as % of inventory (2025Q3–2026Q2, from datadirect_74) plus forward 12-month inventory growth from RealPage's Existing Units forecast.
 - The old historical-average method is retained in the right-hand columns for comparison. Note: the v1 workbook's RealPage 10-yr averages were mis-ranged (`AVERAGEIF` off-range bug — e.g. Charlotte showed −0.2% vs. an actual 5.3%); corrected in v2.
 
 ## Known simplifications
